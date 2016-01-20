@@ -10,9 +10,9 @@ Search functionality has also been provided so that the users can search for mov
 Here's a walkthrough:
 
 Here's a walkthrough:
-![Demo](http://i.imgur.com/a8Vc1Do.gif)
+![Demo](http://i.imgur.com/NxfORxD.gif)
 <br><br>
-<a href="http://i.imgur.com/a8Vc1Do.gif">Walkthrough</a>
+<a href="http://i.imgur.com/NxfORxD.gif">Walkthrough</a>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
