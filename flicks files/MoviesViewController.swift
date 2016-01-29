@@ -131,15 +131,15 @@
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
         
         let attributes = [
             NSForegroundColorAttributeName: UIColor.redColor()
-           // NSFontAttributeName: UIFont(name: "Avenir", size: 20)!
+            // NSFontAttributeName: UIFont(name: "Avenir", size: 20)!
         ]
         self.navigationController?.navigationBar.titleTextAttributes = attributes
         
-
+        
         
         //required for search functionality
         searchController.searchResultsUpdater = self
@@ -279,7 +279,17 @@
                 cell.posterView.alpha = 1
             })
             
-            cell.ratingLabel.text = "Average Rating: " + String(movieToAttach["vote_average"] as! Float)
+            var rating:String
+            
+            //if rating is 0.0, show rating is N/A
+            if (movieToAttach["vote_average"] as! Float == 0){
+                rating = "N/A"
+            }
+            else{
+                rating = String(movieToAttach["vote_average"] as! Float)
+            }
+            
+            cell.ratingLabel.text = "Average Rating: " + rating
             
             //the year of release
             let releaseDate = movieToAttach["release_date"] as! String
@@ -293,7 +303,7 @@
             
             
             cell.dateLabel.text = "Release Date: " + month + "/" + date + "/" + year
-
+            
             
         }
             
@@ -306,17 +316,16 @@
                 overview = "Adult: Yes"
             }
             
-            //the average rating
-            let averageRating = String(movie["vote_average"] as! Float)
+            var averageRating:String
             
-            //let overview = movie["overview"] as! String
+            //if rating is 0.0, show rating is N/A
+            if (movie["vote_average"] as! Float == 0){
+                averageRating = "N/A"
+            }
+            else{
+                averageRating = String(movie["vote_average"] as! Float)
+            }
             
-            //the average rating
-            //print(movie["vote_average"] as! Float)
-            
-           
-            
-            //print(String(movie["vote_average"] as! Float))
             
             //safety check in case the particular movie doesn't have a poster
             if let posterPath = movie["poster_path"] as? String {
@@ -390,12 +399,12 @@
         
         cell.selectionStyle = .None
         
-    
+        
         
         return cell
     }
     
-  
+    
     //for when the movie is clicked and we need to go and see it's details
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -416,6 +425,6 @@
         }
         
     }
-   
+    
     
  }
