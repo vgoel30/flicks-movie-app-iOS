@@ -39,6 +39,9 @@ Here's a walkthrough:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
+## Notes
+Implementing the search functionality was the most challenging part
+
 ## License
 
     Copyright [2016] [Varun Goel]
