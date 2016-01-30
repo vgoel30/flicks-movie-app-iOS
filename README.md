@@ -1,13 +1,36 @@
-# flicks-movie-app-iOS
+# Project 1 - *flicks*
 
-##About
-flicks is an iOS app that lets users view the Current movies in theaters, Top Rated and Popular movies. The app was developed for CodePath Uniersity's assignment. <br><br>
-The data is fetched from <a href="http://docs.themoviedb.apiary.io/#reference/movies">The Movie Database API</a> and presented along with the poster of the movie. The user can then click on a movie cell to view details about the movie. <br><br>
-Search functionality has also been provided so that the users can search for movies for a particular movie that they are looking for.
+**flicks** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+
+Time spent: **About 10-15** hours spent in total
+
+## User Stories
+
+The following **required** functionality is complete:
+
+- [x] User can view a list of movies currently playing in theaters from The Movie Database.
+- [x] Poster images are loaded using the UIImageView category in the AFNetworking library.
+- [x] User sees a loading state while waiting for the movies API.
+- [x] User can pull to refresh the movie list.
+
+The following **optional** features are implemented:
+
+- [x] User sees an error message when there's a networking error.
+- [] Movies are displayed using a CollectionView instead of a TableView.
+- [x] User can search for a movie.
+- [x] All images fade in as they are loading.
+- [x] Customize the UI.
+
+The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app functionality!
+
+Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
+
+1. Discuss CollectionView 
+2. 
 
 ## Video Walkthrough 
-
-Here's a walkthrough:
 
 Here's a walkthrough:
 ![Demo](http://i.imgur.com/NxfORxD.gif)
